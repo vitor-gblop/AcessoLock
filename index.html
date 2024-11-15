@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Lock - Proteja seu Estabelecimento</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="src/css/estilos-geral.css">
+
+    <div id="firebase_links">
+        <script src="src/js/lib.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+        <script src="src/js/init.js"></script>
+    </div>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #F1f1f1;">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="src/img/logo1.svg" class="img-fluid" alt="Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#duvidas">Dúvidas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Seção Hero -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Acesso Lock - A Solução Definitiva para a Sua Segurança</h1>
+            <p>
+                Imagine ter controle total sobre a segurança da sua casa ou empresa na palma da sua mão. 
+                Com Acesso Lock, você pode gerenciar acessos, definir permissões e monitorar sua propriedade em tempo real, de onde estiver. 
+                Nossa tecnologia de trancas inteligentes proporciona uma proteção sem igual, usando criptografia avançada para garantir que 
+                apenas pessoas autorizadas tenham acesso.
+            </p>
+            <a href="#learn-more" class="btn btn-custom">Saiba Mais</a>
+        </div>
+        <div class="hero-image">
+            <img src="src/img/pngwing.com.png" alt="Imagem de segurança inteligente">
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Problemas e Inscrição para Atualizações -->
+<section class="problems-subscription-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Coluna de Problemas -->
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Você já enfrentou esses problemas?</h2>
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="problem-card p-3 shadow-sm rounded">
+                            <h4 class="problem-title">Esqueceu se Trancou a Casa?</h4>
+                            <p class="problem-description">
+                                A insegurança de não lembrar se você trancou a porta da sua casa já estragou seu dia ou até mesmo sua viagem?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <div class="problem-card p-3 shadow-sm rounded">
+                            <h4 class="problem-title">Preocupação com Acessos Não Autorizados?</h4>
+                            <p class="problem-description">
+                                Você se preocupa que pessoas não autorizadas possam ter acesso a informações ou áreas restritas?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <div class="problem-card p-3 shadow-sm rounded">
+                            <h4 class="problem-title">Dificuldade em Gerenciar Acessos em Horários Específicos</h4>
+                            <p class="problem-description">
+                                Precisa permitir acesso a funcionários de limpeza ou prestadores em horários específicos? Com Acesso Lock, você agenda acessos temporários sem a necessidade de chaves físicas.                   
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <div class="problem-card p-3 shadow-sm rounded">
+                            <h4 class="problem-title">Falta de Monitoramento em Tempo Real</h4>
+                            <p class="problem-description">
+                                Precisa saber imediatamente se alguém acessou sua casa ou empresa? Um sistema de trancas IoT envia notificações em tempo real sempre que a porta é trancada ou destrancada, oferecendo tranquilidade e controle instantâneo.                    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna de Formulário -->
+            <section id="contato" div class="col-md-6">
+                <div class="form-container p-4 shadow-lg rounded">
+                    <h2 class="text-center mb-4">Ficou interesado(a)?</h2>
+                    <p class="text-center mb-4">Deixe seu contato para receber atualizações e informações exclusivas sobre o Acesso Lock.</p>
+
+                    <form method="post" class="form-row justify-content-center">
+                        <!-- Campo de Nome -->
+                        <div class="form-group col-12 col-sm-8 col-md-8 mb-4">
+                            <input id="nome_field" type="text" class="form-control form-control-lg" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <!-- Campo de E-mail -->
+                        <div class="form-group col-12 col-sm-8 col-md-8 mb-4">
+                            <input id="email_field" type="email" class="form-control form-control-lg" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <!-- Campo de Opinião -->
+                        <div class="form-group col-12 col-sm-8 col-md-8 mb-4">
+                            <textarea id="interesse_field" class="form-control form-control-lg" name="comentarios" rows="4" placeholder="O que mais te interessou no Acesso Lock?" required></textarea>
+                        </div>
+                        <!-- Campo de Tipo de Usuário -->
+                        <div class="form-group col-12 col-sm-8 col-md-8 mb-4">
+                            <select id="PfPj_field" class="form-control form-control-lg" name="tipo_usuario" required>
+                                <option value="" disabled selected>Você é uma pessoa física ou empresa?</option>
+                                <option value="fisica">Pessoa Física</option>
+                                <option value="empresa">Empresa</option>
+                            </select>
+                        </div>
+
+                        <!-- Botão de Inscrição -->
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-custom btn-lg px-5 py-3" onclick="submissaoDeInteresse()">
+                                Inscrever-se
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Hero com Dúvidas Frequentes -->
+<section class="hero-section">
+    <div class="container-fluid"> <!-- Usando container-fluid para ocupar toda a largura -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Dúvidas Frequentes sobre o Acesso Lock</h2>
+                <p>Aqui você encontra as respostas para as perguntas mais comuns sobre como o Acesso Lock pode melhorar a segurança da sua casa ou empresa.</p>
+
+                <!-- Accordion de FAQ -->
+                <div id="faqAccordion">
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Como funciona o Acesso Lock?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                O Acesso Lock é um sistema de trancas inteligentes conectadas à sua rede Wi-Fi, permitindo que você gerencie os acessos de qualquer lugar através do seu celular. É simples de configurar e oferece um controle total de quem tem permissão para entrar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="duvidas"div class="card mb-3">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    O sistema pode ser instalado em qualquer tipo de porta?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse show"  aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Sim, o Acesso Lock pode ser instalado em portas de diversos materiais, como madeira, metal e vidro, desde que sejam compatíveis com o mecanismo de fechamento das trancas inteligentes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    Como posso garantir que apenas pessoas autorizadas terão acesso?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse show"  aria-labelledby="headingThree" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                O sistema utiliza criptografia avançada e tecnologia de autenticação multifatorial. Apenas usuários autorizados com o código de acesso ou através de permissões definidas por você terão permissão para abrir a tranca.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    Posso controlar o acesso remotamente?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse show"  aria-labelledby="headingFour" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Sim, você pode controlar os acessos remotamente, de qualquer lugar, através do nosso aplicativo. O sistema envia notificações em tempo real para que você esteja sempre informado sobre quem entrou ou saiu.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    O que acontece se eu esquecer de trancar a porta?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse show"  aria-labelledby="headingFive" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                O Acesso Lock envia uma notificação para o seu celular caso a porta não esteja trancada, permitindo que você a tranque remotamente, sem sair do lugar.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-3 bg-white text-dark text-center">
+    <p>&copy; 2024 Acesso Lock. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyI7ep6Pj6t2R27GZ6q6zI1kFej4yMw7pXuq9f+V" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQyXiR0zJ2GQ5bbq7cvmWoRU5+Pnm6Di8ocTgnG6n9h6/hOTlF3lujjzQbBfqX5A" crossorigin="anonymous"></script>
+<!-- Script de Inicialização -->
+
+</body>
+</html>

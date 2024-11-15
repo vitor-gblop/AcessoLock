@@ -1,0 +1,272 @@
+/* Corpo e Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+/* Barra de Navegação */
+.navbar {
+    background-color: #ffffff !important;
+    height: 70px;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    max-height: 550px;
+    width: auto;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #007396 !important;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Jumbotron e Hero Section */
+.jumbotron {
+    background-color: #d6b911;
+    color: #ffffff;
+    padding: 3rem;
+    margin-bottom: 0;
+}
+
+.jumbotron .btn-primary {
+    background-color: #ffffff;
+    color: #d6b911;
+    border-color: #d6b911;
+}
+
+.jumbotron .btn-primary:hover {
+    background-color: #d6b911;
+    color: #ffffff;
+    border-color: #d6b911;
+}
+
+/* Seções de Conteúdo */
+#features, #contact {
+    background-color: #ffffff;
+    padding: 4rem 0;
+}
+
+#products {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+/* Tipografia */
+.display-4 {
+    color: #ffffff;
+}
+
+.lead {
+    color: #000000;
+}
+
+.leadcard-text {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+/* Hero Section - Estilos */
+
+.hero-section {
+    background: linear-gradient(to right, #007bff, #00c6ff); /* Degradê azul */
+    color: white;
+    padding: 100px 0;
+    width: 100%; /* Garante que ocupe toda a largura */
+    position: relative; /* Garante que ocupe toda a área */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .card-header {
+        font-size: 1.1rem;
+    }
+    .card-body {
+        font-size: 0.9rem;
+    }
+}
+
+/* Formulário */
+.form-container {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control-lg {
+    border-radius: 25px;
+    padding: 18px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control-lg:focus {
+    border-color: #dbb923;
+    box-shadow: 0 0 10px rgba(219, 185, 35, 0.5);
+}
+
+.btn-custom {
+    background-color: #dbb923;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    background-color: #c49a1f;
+    box-shadow: 0 4px 15px rgba(219, 185, 35, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-custom:focus, .btn-custom:active {
+    box-shadow: none;
+    background-color: #c49a1f;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para Select (campo de seleção) */
+select.form-control-lg {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    height: 3rem;
+    border-radius: 3rem;
+    width: 100%;
+}
+
+select.form-control-lg:focus {
+    border-color: #dbb923;
+    box-shadow: 0 0 5px rgba(219, 185, 35, 0.5);
+}
+
+select.form-control-lg option {
+    font-size: 1rem;
+}
+
+/* Estilos para a Capa de Apresentação */
+.capa-apresentacao {
+    background-color: #288efa;
+    color: #ffffff;
+    text-shadow: #9999991c;
+    padding: 2rem 1rem;
+    margin-bottom: 0;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para o Accordion */
+.card {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #34a7f3;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.btn-link {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #ecf0f1;
+    color: #000000;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+
+/* Seção de perguntas (FAQ) */
+#faqAccordion {
+    margin: 0 auto;
+    max-width: 1140px; /* Garante que o conteúdo não se espalhe demais */
+}
+
+.problems-subscription-section .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.collapse {
+    transition: height 0.3s ease-in-out;
+}
