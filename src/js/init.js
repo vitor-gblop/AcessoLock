@@ -25,7 +25,7 @@ function submissaoDeInteresse()
         nome: nome,
         email: email,
         interesse: interesse,
-        PFouPJ: PFPJ
+        pessoa: PFPJ
     });
 
     window.alert("Obrigado pelo Interesse!")
