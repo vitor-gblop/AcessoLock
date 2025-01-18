@@ -17,8 +17,10 @@ body {
 }
 
 .navbar-brand img {
-    max-height: 550px;
-    width: auto;
+    max-width: 100% !important;
+    max-height: 50px !important;
+    width: 195px !important;
+    height: 50px !important;
 }
 
 .navbar-brand img:hover {
@@ -27,7 +29,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #000000 !important;
+    color: #ffffff !important;
     font-weight: bold;
 }
 
@@ -135,6 +137,15 @@ footer {
     .hero-section {
         padding: 60px 20px;
     }
+    .hero-content{
+        width: 100%;
+    }
+    .hero-text{
+        max-width: 100%;
+    }
+    .hero-image {
+        display: none;
+    }
     .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
@@ -144,6 +155,12 @@ footer {
     }
     .card-body {
         font-size: 0.9rem;
+    }
+
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+
     }
 }
 
@@ -269,4 +286,5 @@ select.form-control-lg option {
 
 .collapse {
     transition: height 0.3s ease-in-out;
+    z-index: 5;
 }

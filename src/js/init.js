@@ -34,3 +34,18 @@ function submissaoDeInteresse()
         location.reload();
     }, 1000);
 }
+
+function toggleNav()
+{
+    let nav = document.getElementById("navbarNav");
+    let navBtn = document.getElementById("navBtn");
+
+    if(nav.style.display == "none" || nav.style.display == "")
+    {
+        nav.style.display = "flex";
+    }
+    else
+    {
+        nav.style.display = "none";
+    }
+}
